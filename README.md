@@ -907,4 +907,5 @@ int main() {
 ```
 
 Outros Logs:
-- 
+ - [Log 10 processos](https://github.com/bombark/tp_sisdis_2026_1/blob/main/log_algoritmo2_10.txt)
+ - [Log 20 processos](https://github.com/bombark/tp_sisdis_2026_1/blob/main/log_algoritmo2_20.txt)
