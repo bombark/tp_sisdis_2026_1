@@ -231,14 +231,14 @@ int main (int argc, char *argv[]) {
 
                     // Senão, inicia uma nova rodada
                     } else {
-                        // Aumenta a rodada e set -1 em todos os candidatos
+                        // Aumenta a rodada e seta -1 em todos os candidatos
                         info(id_processo, "tenho todos os sorteados, mas nao foi eleito");
                         const int rodada = processo[id_processo].rodada;
                         const int valor_sorteado_anterior = processo[id_processo].valores_sorteados[id_processo];
                         processo[id_processo].rodada += 1;
                         limpa_valores_sorteados_dos_candidatos(id_processo, N);
 
-                        // Se é candidato, então sorteio um novo numero
+                        // Se é candidato, então sorteia um novo numero
                         if ( valor_sorteado_anterior == 1 ) {
                             const int valor_sorteado = randomic(0,1);
                             processo[id_processo].valores_sorteados[id_processo] = valor_sorteado;
