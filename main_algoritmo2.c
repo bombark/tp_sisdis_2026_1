@@ -32,7 +32,7 @@
 #include "smpl.h"
 
 // Tempo maximo de simulação
-#define TEMPO_MAXIMO     300
+#define TEMPO_MAXIMO     400
 
 // Eventos da simulação
 #define TEST                      1
@@ -50,6 +50,7 @@ typedef struct{
    int rodada;
    int valores_sorteados[100]; // maximo de 100 processos
    bool foi_alterado[100];
+   int valores_sorteados_copia[100];
 } TipoProcesso;
 
 TipoProcesso *processo;
@@ -110,6 +111,21 @@ const char* mostra_valores_sorteados(int id_processo, int tamanho) {
     return buffer;
 }
 
+void guarda_valores_sorteados(int id_processo) {
+    int* vetor_destino = &processo[id_processo].valores_sorteados_copia[0];
+    const int* vetor_fonte = &processo[id_processo].valores_sorteados[0];
+    for (int i=0; i<N; i++) {
+        vetor_destino[i] = vetor_fonte[i];
+    }
+}
+
+void restaura_valores_sorteados(int id_processo) {
+    int* vetor_destino = &processo[id_processo].valores_sorteados[0];
+    const int* vetor_fonte = &processo[id_processo].valores_sorteados_copia[0];
+    for (int i=0; i<N; i++) {
+        vetor_destino[i] = vetor_fonte[i];
+    }
+}
 
 // ======================================================================================
 //  Main
@@ -127,7 +143,7 @@ int main (int argc, char *argv[]) {
     // 1. Inicialização do SMPL
     smpl(0, "Um Exemplo de Simulação");
     reset();
-    stream(1);
+    stream(2);
 
     // 2. Inicialização dos processos
     processo = (TipoProcesso *) malloc(sizeof(TipoProcesso)*N);
@@ -231,11 +247,22 @@ int main (int argc, char *argv[]) {
 
                     // Senão, inicia uma nova rodada
                     } else {
+                        // Se todos sortearam 0, então restaura o ultimo vetor e inicia uma nova rodada
+                        if ( contador == 0 ) {
+                            info(id_processo, "Deu ruim, nenhum candidato sobrou");
+                            restaura_valores_sorteados(id_processo);
+                            info(id_processo, "Vetor restaurado");
+                        }
+
                         // Aumenta a rodada e seta -1 em todos os candidatos
-                        info(id_processo, "tenho todos os sorteados, mas nao foi eleito");
+                        info(id_processo, "tenho todos os sorteados, mas ninguem foi eleito");
                         const int rodada = processo[id_processo].rodada;
                         const int valor_sorteado_anterior = processo[id_processo].valores_sorteados[id_processo];
                         processo[id_processo].rodada += 1;
+
+
+                        // Guarda os valores para restaurar, caso dê ruim
+                        guarda_valores_sorteados(id_processo);
                         limpa_valores_sorteados_dos_candidatos(id_processo, N);
 
                         // Se é candidato, então sorteia um novo numero

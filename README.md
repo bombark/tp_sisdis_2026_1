@@ -372,9 +372,19 @@ Um processo que é candidato manda uma mensagem para o seguinte informando seu i
 Vamos usar como critério para a eleição o maior identificador.
 sabe que é o líder e todos o processos do anel já receberam sua mensagem. O processo pode então descartar a mensagem e executar procedimento de lider.
 
+## 1.1. Algoritmo
+
+### Quando INICIO_ELEICAO:
+- 1a. Processos candidatos enviam sua candidatura
+- 1b. Processos não candidatos não fazem nada
+
+### Quando RECEBE_CANDIDATURA:
+1. Calcula o id do processo anterior do anel e recebe a candidatura do lider
+2. Caso o id do candidato for maior que o atual, então atualiza o lider e envia a nova candidatura
+3. Caso um processo recebe de volta sua própria mensagem informando que é candidato, então ele é o lider
 
 
-## 1.1. Código
+## 1.2. Código
 
 ```c
 [...]
@@ -413,8 +423,7 @@ int main() {
             info(id_processo, "envia candidatura de %d para %d", candidato_recebido, envia_para);
         }
 
-        // Quando um processo recebe de volta sua própria mensagem informando que é candidato, 
-        // sabe  que é o líder e todos o processos do anel já receberam sua mensagem.
+        // Caso um processo recebe de volta sua própria mensagem informando que é candidato, então ele é o lider
         if ( candidato_recebido == id_processo ) {
             info(id_processo, "Fui eleito lider");
         }
@@ -426,7 +435,7 @@ int main() {
 
 
 
-## 1.1. Caso de Execução do Algoritmo 1 para 1 único candidato
+## 1.3. Caso de Execução do Algoritmo 1 para 1 único candidato
 
 ```bash
 ./algoritmo1 10 b
@@ -477,7 +486,7 @@ int main() {
 Mensagens enviadas: 9 mensagens
 
 
-## 1.2. Caso de Execução do Algoritmo 1 para vários candidatos selecionados aleatoriamente
+## 1.4. Caso de Execução do Algoritmo 1 para vários candidatos selecionados aleatoriamente
 
 ```bash
 ./algoritmo1 10 a
@@ -531,7 +540,7 @@ Mensagens enviadas: 9 mensagens
 Mensagens enviadas: 13 mensagens
 
 
-## 1.3. Caso de Execução do Algoritmo 1 para todos os N processos inicialmente candidatos
+## 1.5. Caso de Execução do Algoritmo 1 para todos os N processos inicialmente candidatos
 
 ```bash
 ./algoritmo1 10 c
@@ -596,8 +605,25 @@ Mensagens enviadas: 18 mensagens
 
 Implemente o algoritmo aleatorizado para eleição de líder (Randomized Leader Election Algorithm) baseado no anel (VRing). Neste algoritmo cada processo sorteia, em cada rodada um bit aleatório. O algoritmo funciona em rodadas. Na primeira rodada todos os N processos sorteiam um valor aleatório para o seu bit. Os processos com bit = 1 são candidatos, os demais processos (i.e. com seu bit = 0) não são candidatos. Cada processo deve enviar uma mensagem que roda todo o anel informando seu id e seu bit da rodada. Na rodada seguinte, apenas os processos com bit = 1 sorteiam novo valor aleatório para o bit. Esses processos então comunicam novamente no anel o valor dos seus bits. Novas rodadas vão acontecendo até que 1 processo se transforme em líder. Execute o algoritmo para diferentes valores de N. Destaque para cada execução quem é o líder eleito. Conte quantas mensagens foram necessárias em cada caso e também quanto tempo (do SMPL) foi necessário para executar a eleição. 
 
+## 2.1. Algoritmo
 
-## 2.1. Código
+### Quando INICIO_ELEICAO:
+ - inicia as variaveis locais do processo
+ - sorteia o numero, 0 para não candidato e 1 para candidato
+ - agenda evento RECEBE_VALORES_SORTEADOS
+
+### Quando RECEBE_VALORES_SORTEADOS:
+  - 1. Inicializa variaveis necessarias
+  - 2a. Caso a rodada recebida seja maior que a rodada corrente
+    - salva o atual valor sorteado, limpa os valores sorteados para a nova rodada e recebe os dados do sorteio
+    - sorteia um novo número, caso o processo seja candidato
+  - 2b. Caso a rodada recebida seja igual à rodada corrente, apenas recebe os sorteio
+  - 3. Verifica se o processo tem o sorteio de todos os processos
+    - Conta quandos candidatos tem no vetor
+    - Se tiver apenas um, então lider foi eleito
+    - Senão inicia uma nova rodada e agenda evento RECEBE_VALORES_SORTEADOS
+
+## 2.2. Código
 
 ```c
 int main() {
@@ -612,7 +638,7 @@ int main() {
             processo[id_processo].foi_alterado[j] = false;
         }
 
-        // sorteia se é lider ou não
+        // sorteia o numero, 0 para não candidato e 1 para candidato
         const int valor_sorteado = randomic(0,1);
         processo[id_processo].valores_sorteados[id_processo] = valor_sorteado;
         processo[id_processo].foi_alterado[id_processo] = true;
@@ -637,10 +663,10 @@ int main() {
             const int valor_atual = processo[id_processo].valores_sorteados[id_processo];
             processo[id_processo].rodada = processo[processo_que_enviou].rodada;
             limpa_valores_sorteados_dos_candidatos(id_processo, N);
+            recebe_valores_sorteados(id_processo, processo_que_enviou, N);
 
             // Caso o processo seja ainda candidato, sorteia um novo numero
-            if ( valor_atual == 1 ) {
-                recebe_valores_sorteados(id_processo, processo_que_enviou, N);
+            if ( valor_atual == 1 ) {               
                 const int valor_sorteado = randomic(0,1);
                 processo[id_processo].valores_sorteados[id_processo] = valor_sorteado;
                 processo[id_processo].foi_alterado[id_processo] = true;
@@ -648,7 +674,6 @@ int main() {
 
             // Caso o processo não seja candidato, apenas copia os dados recebidos
             } else {
-                recebe_valores_sorteados(id_processo, processo_que_enviou, N);
                 info(id_processo, "Processo %d e recebeu mensagem de %d com nova rodada e nao sou candidato", id_processo, processo_que_enviou);
             }
             
@@ -708,7 +733,7 @@ int main() {
 
 
 
-## 2.2. Caso de Execução do Algoritmo 2
+## 2.3. Caso de Execução do Algoritmo 2
 
 ```
 ===============================================================
@@ -880,3 +905,6 @@ int main() {
 [261.0, Proc. 1, Rodada 1, Sorteio:  0  0  0  0  0  0  0  1  0  0  ]: Recebido mensagem de 0
 [261.0, Proc. 1, Rodada 1, Sorteio:  0  0  0  0  0  0  0  1  0  0  ]: Eleito um lider
 ```
+
+Outros Logs:
+- 

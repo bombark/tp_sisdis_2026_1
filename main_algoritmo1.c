@@ -180,8 +180,7 @@ int main (int argc, char *argv[]) {
                     info(id_processo, "recebe candidatura %d do processo %d, descarta a candidatura", candidato_recebido, processo_que_enviou );
                 }
 
-                // Quando um processo recebe de volta sua própria mensagem informando que é candidato, 
-                // sabe  que é o líder e todos o processos do anel já receberam sua mensagem.
+                // Caso um processo recebe de volta sua própria mensagem informando que é candidato, então ele é o lider
                 if ( candidato_recebido == id_processo ) {
                     info(id_processo, "Fui eleito lider");
                 }

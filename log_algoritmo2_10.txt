@@ -1,0 +1,571 @@
+===============================================================
+           Sistemas Distribuí­dos Prof. Elias
+          LOG do Trabalho Prático 0, Tarefa 0
+      Digitar, compilar e executar o programa tempo.c
+   Este programa foi executado para: N=10 processos.
+           Tempo Total de Simulação = 400
+===============================================================
+[10.0, Proc. 0, Rodada 0, Sorteio:  1 -1 -1 -1 -1 -1 -1 -1 -1 -1  ]: Inicio da eleição
+[11.0, Proc. 1, Rodada 0, Sorteio: -1  0 -1 -1 -1 -1 -1 -1 -1 -1  ]: Inicio da eleição
+[12.0, Proc. 2, Rodada 0, Sorteio: -1 -1  1 -1 -1 -1 -1 -1 -1 -1  ]: Inicio da eleição
+[13.0, Proc. 3, Rodada 0, Sorteio: -1 -1 -1  0 -1 -1 -1 -1 -1 -1  ]: Inicio da eleição
+[14.0, Proc. 4, Rodada 0, Sorteio: -1 -1 -1 -1  1 -1 -1 -1 -1 -1  ]: Inicio da eleição
+[15.0, Proc. 5, Rodada 0, Sorteio: -1 -1 -1 -1 -1  0 -1 -1 -1 -1  ]: Inicio da eleição
+[16.0, Proc. 6, Rodada 0, Sorteio: -1 -1 -1 -1 -1 -1  0 -1 -1 -1  ]: Inicio da eleição
+[17.0, Proc. 7, Rodada 0, Sorteio: -1 -1 -1 -1 -1 -1 -1  0 -1 -1  ]: Inicio da eleição
+[18.0, Proc. 8, Rodada 0, Sorteio: -1 -1 -1 -1 -1 -1 -1 -1  1 -1  ]: Inicio da eleição
+[19.0, Proc. 9, Rodada 0, Sorteio: -1 -1 -1 -1 -1 -1 -1 -1 -1  0  ]: Inicio da eleição
+[30.0, Proc. 0, Rodada 0, Sorteio:  1 -1 -1 -1 -1 -1 -1 -1 -1 -1  ]: Recebido mensagem de 9
+[31.0, Proc. 1, Rodada 0, Sorteio: -1  0 -1 -1 -1 -1 -1 -1 -1 -1  ]: Recebido mensagem de 0
+[32.0, Proc. 2, Rodada 0, Sorteio: -1 -1  1 -1 -1 -1 -1 -1 -1 -1  ]: Recebido mensagem de 1
+[33.0, Proc. 3, Rodada 0, Sorteio: -1 -1 -1  0 -1 -1 -1 -1 -1 -1  ]: Recebido mensagem de 2
+[34.0, Proc. 4, Rodada 0, Sorteio: -1 -1 -1 -1  1 -1 -1 -1 -1 -1  ]: Recebido mensagem de 3
+[35.0, Proc. 5, Rodada 0, Sorteio: -1 -1 -1 -1 -1  0 -1 -1 -1 -1  ]: Recebido mensagem de 4
+[36.0, Proc. 6, Rodada 0, Sorteio: -1 -1 -1 -1 -1 -1  0 -1 -1 -1  ]: Recebido mensagem de 5
+[37.0, Proc. 7, Rodada 0, Sorteio: -1 -1 -1 -1 -1 -1 -1  0 -1 -1  ]: Recebido mensagem de 6
+[38.0, Proc. 8, Rodada 0, Sorteio: -1 -1 -1 -1 -1 -1 -1 -1  1 -1  ]: Recebido mensagem de 7
+[38.0, Proc. 8, Rodada 0, Sorteio:  1  0  1  0  1  0  0  0  1  0  ]: tenho todos os sorteados, mas ninguem foi eleito
+[38.0, Proc. 8, Rodada 1, Sorteio: -1  0 -1  0 -1  0  0  0  0  0  ]: Nova rodada 0 -> 1
+[39.0, Proc. 9, Rodada 1, Sorteio: -1  0 -1  0 -1  0  0  0  0  0  ]: Processo 9 e recebeu mensagem de 8 com nova rodada e nao sou candidato
+[40.0, Proc. 1, Rodada 0, Sorteio:  1  0 -1 -1 -1 -1 -1 -1 -1  0  ]: Recebido mensagem de 0
+[41.0, Proc. 2, Rodada 0, Sorteio:  1  0  1 -1 -1 -1 -1 -1 -1  0  ]: Recebido mensagem de 1
+[42.0, Proc. 3, Rodada 0, Sorteio:  1  0  1  0 -1 -1 -1 -1 -1  0  ]: Recebido mensagem de 2
+[43.0, Proc. 4, Rodada 0, Sorteio:  1  0  1  0  1 -1 -1 -1 -1  0  ]: Recebido mensagem de 3
+[44.0, Proc. 5, Rodada 0, Sorteio:  1  0  1  0  1  0 -1 -1 -1  0  ]: Recebido mensagem de 4
+[45.0, Proc. 6, Rodada 0, Sorteio:  1  0  1  0  1  0  0 -1 -1  0  ]: Recebido mensagem de 5
+[46.0, Proc. 7, Rodada 0, Sorteio:  1  0  1  0  1  0  0  0 -1  0  ]: Recebido mensagem de 6
+[48.0, Proc. 9, Rodada 1, Sorteio: -1  0 -1  0 -1  0  0  0  0  0  ]: Recebido mensagem de 8
+[49.0, Proc. 0, Rodada 1, Sorteio:  1  0 -1  0 -1  0  0  0  0  0  ]: Recebido mensagem de 9 com nova rodada e sorteie o numero 1
+[50.0, Proc. 2, Rodada 0, Sorteio:  1  0  1 -1 -1 -1 -1 -1 -1  0  ]: Recebido mensagem de 1
+[51.0, Proc. 3, Rodada 0, Sorteio:  1  0  1  0 -1 -1 -1 -1 -1  0  ]: Recebido mensagem de 2
+[52.0, Proc. 4, Rodada 0, Sorteio:  1  0  1  0  1 -1 -1 -1 -1  0  ]: Recebido mensagem de 3
+[53.0, Proc. 5, Rodada 0, Sorteio:  1  0  1  0  1  0 -1 -1 -1  0  ]: Recebido mensagem de 4
+[54.0, Proc. 6, Rodada 0, Sorteio:  1  0  1  0  1  0  0 -1 -1  0  ]: Recebido mensagem de 5
+[55.0, Proc. 7, Rodada 0, Sorteio:  1  0  1  0  1  0  0  0 -1  0  ]: Recebido mensagem de 6
+[57.0, Proc. 9, Rodada 1, Sorteio: -1  0 -1  0 -1  0  0  0  0  0  ]: Recebido mensagem de 8
+[58.0, Proc. 0, Rodada 1, Sorteio:  1  0 -1  0 -1  0  0  0  0  0  ]: Recebido mensagem de 9
+[59.0, Proc. 1, Rodada 1, Sorteio:  1  0 -1  0 -1  0  0  0  0  0  ]: Processo 1 e recebeu mensagem de 0 com nova rodada e nao sou candidato
+[60.0, Proc. 3, Rodada 0, Sorteio:  1  0  1  0 -1 -1 -1 -1 -1  0  ]: Recebido mensagem de 2
+[61.0, Proc. 4, Rodada 0, Sorteio:  1  0  1  0  1 -1 -1 -1 -1  0  ]: Recebido mensagem de 3
+[62.0, Proc. 5, Rodada 0, Sorteio:  1  0  1  0  1  0 -1 -1 -1  0  ]: Recebido mensagem de 4
+[63.0, Proc. 6, Rodada 0, Sorteio:  1  0  1  0  1  0  0 -1 -1  0  ]: Recebido mensagem de 5
+[64.0, Proc. 7, Rodada 0, Sorteio:  1  0  1  0  1  0  0  0 -1  0  ]: Recebido mensagem de 6
+[66.0, Proc. 9, Rodada 1, Sorteio: -1  0 -1  0 -1  0  0  0  0  0  ]: Recebido mensagem de 8
+[67.0, Proc. 0, Rodada 1, Sorteio:  1  0 -1  0 -1  0  0  0  0  0  ]: Recebido mensagem de 9
+[68.0, Proc. 1, Rodada 1, Sorteio:  1  0 -1  0 -1  0  0  0  0  0  ]: Recebido mensagem de 0
+[69.0, Proc. 2, Rodada 1, Sorteio:  1  0  1  0 -1  0  0  0  0  0  ]: Recebido mensagem de 1 com nova rodada e sorteie o numero 1
+[70.0, Proc. 4, Rodada 0, Sorteio:  1  0  1  0  1 -1 -1 -1 -1  0  ]: Recebido mensagem de 3
+[71.0, Proc. 5, Rodada 0, Sorteio:  1  0  1  0  1  0 -1 -1 -1  0  ]: Recebido mensagem de 4
+[72.0, Proc. 6, Rodada 0, Sorteio:  1  0  1  0  1  0  0 -1 -1  0  ]: Recebido mensagem de 5
+[73.0, Proc. 7, Rodada 0, Sorteio:  1  0  1  0  1  0  0  0 -1  0  ]: Recebido mensagem de 6
+[75.0, Proc. 9, Rodada 1, Sorteio: -1  0 -1  0 -1  0  0  0  0  0  ]: Recebido mensagem de 8
+[76.0, Proc. 0, Rodada 1, Sorteio:  1  0 -1  0 -1  0  0  0  0  0  ]: Recebido mensagem de 9
+[77.0, Proc. 1, Rodada 1, Sorteio:  1  0 -1  0 -1  0  0  0  0  0  ]: Recebido mensagem de 0
+[78.0, Proc. 2, Rodada 1, Sorteio:  1  0  1  0 -1  0  0  0  0  0  ]: Recebido mensagem de 1
+[79.0, Proc. 3, Rodada 1, Sorteio:  1  0  1  0 -1  0  0  0  0  0  ]: Processo 3 e recebeu mensagem de 2 com nova rodada e nao sou candidato
+[80.0, Proc. 5, Rodada 0, Sorteio:  1  0  1  0  1  0 -1 -1 -1  0  ]: Recebido mensagem de 4
+[81.0, Proc. 6, Rodada 0, Sorteio:  1  0  1  0  1  0  0 -1 -1  0  ]: Recebido mensagem de 5
+[82.0, Proc. 7, Rodada 0, Sorteio:  1  0  1  0  1  0  0  0 -1  0  ]: Recebido mensagem de 6
+[84.0, Proc. 9, Rodada 1, Sorteio: -1  0 -1  0 -1  0  0  0  0  0  ]: Recebido mensagem de 8
+[85.0, Proc. 0, Rodada 1, Sorteio:  1  0 -1  0 -1  0  0  0  0  0  ]: Recebido mensagem de 9
+[86.0, Proc. 1, Rodada 1, Sorteio:  1  0 -1  0 -1  0  0  0  0  0  ]: Recebido mensagem de 0
+[87.0, Proc. 2, Rodada 1, Sorteio:  1  0  1  0 -1  0  0  0  0  0  ]: Recebido mensagem de 1
+[88.0, Proc. 3, Rodada 1, Sorteio:  1  0  1  0 -1  0  0  0  0  0  ]: Recebido mensagem de 2
+[89.0, Proc. 4, Rodada 1, Sorteio:  1  0  1  0  1  0  0  0  0  0  ]: Recebido mensagem de 3 com nova rodada e sorteie o numero 1
+[89.0, Proc. 4, Rodada 1, Sorteio:  1  0  1  0  1  0  0  0  0  0  ]: tenho todos os sorteados, mas ninguem foi eleito
+[89.0, Proc. 4, Rodada 2, Sorteio: -1  0 -1  0  0  0  0  0  0  0  ]: Nova rodada 1 -> 2
+[90.0, Proc. 6, Rodada 0, Sorteio:  1  0  1  0  1  0  0 -1 -1  0  ]: Recebido mensagem de 5
+[91.0, Proc. 7, Rodada 0, Sorteio:  1  0  1  0  1  0  0  0 -1  0  ]: Recebido mensagem de 6
+[93.0, Proc. 9, Rodada 1, Sorteio: -1  0 -1  0 -1  0  0  0  0  0  ]: Recebido mensagem de 8
+[94.0, Proc. 0, Rodada 1, Sorteio:  1  0 -1  0 -1  0  0  0  0  0  ]: Recebido mensagem de 9
+[95.0, Proc. 1, Rodada 1, Sorteio:  1  0 -1  0 -1  0  0  0  0  0  ]: Recebido mensagem de 0
+[96.0, Proc. 2, Rodada 1, Sorteio:  1  0  1  0 -1  0  0  0  0  0  ]: Recebido mensagem de 1
+[97.0, Proc. 3, Rodada 1, Sorteio:  1  0  1  0 -1  0  0  0  0  0  ]: Recebido mensagem de 2
+[99.0, Proc. 5, Rodada 2, Sorteio: -1  0 -1  0  0  0  0  0  0  0  ]: Processo 5 e recebeu mensagem de 4 com nova rodada e nao sou candidato
+[100.0, Proc. 7, Rodada 0, Sorteio:  1  0  1  0  1  0  0  0 -1  0  ]: Recebido mensagem de 6
+[102.0, Proc. 9, Rodada 1, Sorteio: -1  0 -1  0 -1  0  0  0  0  0  ]: Recebido mensagem de 8
+[103.0, Proc. 0, Rodada 1, Sorteio:  1  0 -1  0 -1  0  0  0  0  0  ]: Recebido mensagem de 9
+[104.0, Proc. 1, Rodada 1, Sorteio:  1  0 -1  0 -1  0  0  0  0  0  ]: Recebido mensagem de 0
+[105.0, Proc. 2, Rodada 1, Sorteio:  1  0  1  0 -1  0  0  0  0  0  ]: Recebido mensagem de 1
+[106.0, Proc. 3, Rodada 1, Sorteio:  1  0  1  0 -1  0  0  0  0  0  ]: Recebido mensagem de 2
+[108.0, Proc. 5, Rodada 2, Sorteio: -1  0 -1  0  0  0  0  0  0  0  ]: Recebido mensagem de 4
+[109.0, Proc. 6, Rodada 2, Sorteio: -1  0 -1  0  0  0  0  0  0  0  ]: Processo 6 e recebeu mensagem de 5 com nova rodada e nao sou candidato
+[111.0, Proc. 9, Rodada 1, Sorteio: -1  0 -1  0 -1  0  0  0  0  0  ]: Recebido mensagem de 8
+[112.0, Proc. 0, Rodada 1, Sorteio:  1  0 -1  0 -1  0  0  0  0  0  ]: Recebido mensagem de 9
+[113.0, Proc. 1, Rodada 1, Sorteio:  1  0 -1  0 -1  0  0  0  0  0  ]: Recebido mensagem de 0
+[114.0, Proc. 2, Rodada 1, Sorteio:  1  0  1  0 -1  0  0  0  0  0  ]: Recebido mensagem de 1
+[115.0, Proc. 3, Rodada 1, Sorteio:  1  0  1  0 -1  0  0  0  0  0  ]: Recebido mensagem de 2
+[117.0, Proc. 5, Rodada 2, Sorteio: -1  0 -1  0  0  0  0  0  0  0  ]: Recebido mensagem de 4
+[118.0, Proc. 6, Rodada 2, Sorteio: -1  0 -1  0  0  0  0  0  0  0  ]: Recebido mensagem de 5
+[119.0, Proc. 7, Rodada 2, Sorteio: -1  0 -1  0  0  0  0  0  0  0  ]: Processo 7 e recebeu mensagem de 6 com nova rodada e nao sou candidato
+[120.0, Proc. 9, Rodada 1, Sorteio: -1  0 -1  0 -1  0  0  0  0  0  ]: Recebido mensagem de 8
+[121.0, Proc. 0, Rodada 1, Sorteio:  1  0 -1  0 -1  0  0  0  0  0  ]: Recebido mensagem de 9
+[122.0, Proc. 1, Rodada 1, Sorteio:  1  0 -1  0 -1  0  0  0  0  0  ]: Recebido mensagem de 0
+[123.0, Proc. 2, Rodada 1, Sorteio:  1  0  1  0 -1  0  0  0  0  0  ]: Recebido mensagem de 1
+[124.0, Proc. 3, Rodada 1, Sorteio:  1  0  1  0 -1  0  0  0  0  0  ]: Recebido mensagem de 2
+[126.0, Proc. 5, Rodada 2, Sorteio: -1  0 -1  0  0  0  0  0  0  0  ]: Recebido mensagem de 4
+[127.0, Proc. 6, Rodada 2, Sorteio: -1  0 -1  0  0  0  0  0  0  0  ]: Recebido mensagem de 5
+[128.0, Proc. 7, Rodada 2, Sorteio: -1  0 -1  0  0  0  0  0  0  0  ]: Recebido mensagem de 6
+[129.0, Proc. 8, Rodada 2, Sorteio: -1  0 -1  0  0  0  0  0  0  0  ]: Processo 8 e recebeu mensagem de 7 com nova rodada e nao sou candidato
+[130.0, Proc. 0, Rodada 1, Sorteio:  1  0 -1  0 -1  0  0  0  0  0  ]: Recebido mensagem de 9
+[131.0, Proc. 1, Rodada 1, Sorteio:  1  0 -1  0 -1  0  0  0  0  0  ]: Recebido mensagem de 0
+[132.0, Proc. 2, Rodada 1, Sorteio:  1  0  1  0 -1  0  0  0  0  0  ]: Recebido mensagem de 1
+[133.0, Proc. 3, Rodada 1, Sorteio:  1  0  1  0 -1  0  0  0  0  0  ]: Recebido mensagem de 2
+[135.0, Proc. 5, Rodada 2, Sorteio: -1  0 -1  0  0  0  0  0  0  0  ]: Recebido mensagem de 4
+[136.0, Proc. 6, Rodada 2, Sorteio: -1  0 -1  0  0  0  0  0  0  0  ]: Recebido mensagem de 5
+[137.0, Proc. 7, Rodada 2, Sorteio: -1  0 -1  0  0  0  0  0  0  0  ]: Recebido mensagem de 6
+[138.0, Proc. 8, Rodada 2, Sorteio: -1  0 -1  0  0  0  0  0  0  0  ]: Recebido mensagem de 7
+[139.0, Proc. 9, Rodada 2, Sorteio: -1  0 -1  0  0  0  0  0  0  0  ]: Processo 9 e recebeu mensagem de 8 com nova rodada e nao sou candidato
+[140.0, Proc. 1, Rodada 1, Sorteio:  1  0 -1  0 -1  0  0  0  0  0  ]: Recebido mensagem de 0
+[141.0, Proc. 2, Rodada 1, Sorteio:  1  0  1  0 -1  0  0  0  0  0  ]: Recebido mensagem de 1
+[142.0, Proc. 3, Rodada 1, Sorteio:  1  0  1  0 -1  0  0  0  0  0  ]: Recebido mensagem de 2
+[144.0, Proc. 5, Rodada 2, Sorteio: -1  0 -1  0  0  0  0  0  0  0  ]: Recebido mensagem de 4
+[145.0, Proc. 6, Rodada 2, Sorteio: -1  0 -1  0  0  0  0  0  0  0  ]: Recebido mensagem de 5
+[146.0, Proc. 7, Rodada 2, Sorteio: -1  0 -1  0  0  0  0  0  0  0  ]: Recebido mensagem de 6
+[147.0, Proc. 8, Rodada 2, Sorteio: -1  0 -1  0  0  0  0  0  0  0  ]: Recebido mensagem de 7
+[148.0, Proc. 9, Rodada 2, Sorteio: -1  0 -1  0  0  0  0  0  0  0  ]: Recebido mensagem de 8
+[149.0, Proc. 0, Rodada 2, Sorteio:  0  0 -1  0  0  0  0  0  0  0  ]: Recebido mensagem de 9 com nova rodada e sorteie o numero 0
+[150.0, Proc. 2, Rodada 1, Sorteio:  1  0  1  0 -1  0  0  0  0  0  ]: Recebido mensagem de 1
+[151.0, Proc. 3, Rodada 1, Sorteio:  1  0  1  0 -1  0  0  0  0  0  ]: Recebido mensagem de 2
+[153.0, Proc. 5, Rodada 2, Sorteio: -1  0 -1  0  0  0  0  0  0  0  ]: Recebido mensagem de 4
+[154.0, Proc. 6, Rodada 2, Sorteio: -1  0 -1  0  0  0  0  0  0  0  ]: Recebido mensagem de 5
+[155.0, Proc. 7, Rodada 2, Sorteio: -1  0 -1  0  0  0  0  0  0  0  ]: Recebido mensagem de 6
+[156.0, Proc. 8, Rodada 2, Sorteio: -1  0 -1  0  0  0  0  0  0  0  ]: Recebido mensagem de 7
+[157.0, Proc. 9, Rodada 2, Sorteio: -1  0 -1  0  0  0  0  0  0  0  ]: Recebido mensagem de 8
+[158.0, Proc. 0, Rodada 2, Sorteio:  0  0 -1  0  0  0  0  0  0  0  ]: Recebido mensagem de 9
+[159.0, Proc. 1, Rodada 2, Sorteio:  0  0 -1  0  0  0  0  0  0  0  ]: Processo 1 e recebeu mensagem de 0 com nova rodada e nao sou candidato
+[160.0, Proc. 3, Rodada 1, Sorteio:  1  0  1  0 -1  0  0  0  0  0  ]: Recebido mensagem de 2
+[162.0, Proc. 5, Rodada 2, Sorteio: -1  0 -1  0  0  0  0  0  0  0  ]: Recebido mensagem de 4
+[163.0, Proc. 6, Rodada 2, Sorteio: -1  0 -1  0  0  0  0  0  0  0  ]: Recebido mensagem de 5
+[164.0, Proc. 7, Rodada 2, Sorteio: -1  0 -1  0  0  0  0  0  0  0  ]: Recebido mensagem de 6
+[165.0, Proc. 8, Rodada 2, Sorteio: -1  0 -1  0  0  0  0  0  0  0  ]: Recebido mensagem de 7
+[166.0, Proc. 9, Rodada 2, Sorteio: -1  0 -1  0  0  0  0  0  0  0  ]: Recebido mensagem de 8
+[167.0, Proc. 0, Rodada 2, Sorteio:  0  0 -1  0  0  0  0  0  0  0  ]: Recebido mensagem de 9
+[168.0, Proc. 1, Rodada 2, Sorteio:  0  0 -1  0  0  0  0  0  0  0  ]: Recebido mensagem de 0
+[169.0, Proc. 2, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 1 com nova rodada e sorteie o numero 1
+[169.0, Proc. 2, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[171.0, Proc. 5, Rodada 2, Sorteio: -1  0 -1  0  0  0  0  0  0  0  ]: Recebido mensagem de 4
+[172.0, Proc. 6, Rodada 2, Sorteio: -1  0 -1  0  0  0  0  0  0  0  ]: Recebido mensagem de 5
+[173.0, Proc. 7, Rodada 2, Sorteio: -1  0 -1  0  0  0  0  0  0  0  ]: Recebido mensagem de 6
+[174.0, Proc. 8, Rodada 2, Sorteio: -1  0 -1  0  0  0  0  0  0  0  ]: Recebido mensagem de 7
+[175.0, Proc. 9, Rodada 2, Sorteio: -1  0 -1  0  0  0  0  0  0  0  ]: Recebido mensagem de 8
+[176.0, Proc. 0, Rodada 2, Sorteio:  0  0 -1  0  0  0  0  0  0  0  ]: Recebido mensagem de 9
+[177.0, Proc. 1, Rodada 2, Sorteio:  0  0 -1  0  0  0  0  0  0  0  ]: Recebido mensagem de 0
+[178.0, Proc. 2, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 1
+[178.0, Proc. 2, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[179.0, Proc. 3, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Processo 3 e recebeu mensagem de 2 com nova rodada e nao sou candidato
+[179.0, Proc. 3, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[180.0, Proc. 5, Rodada 2, Sorteio: -1  0 -1  0  0  0  0  0  0  0  ]: Recebido mensagem de 4
+[181.0, Proc. 6, Rodada 2, Sorteio: -1  0 -1  0  0  0  0  0  0  0  ]: Recebido mensagem de 5
+[182.0, Proc. 7, Rodada 2, Sorteio: -1  0 -1  0  0  0  0  0  0  0  ]: Recebido mensagem de 6
+[183.0, Proc. 8, Rodada 2, Sorteio: -1  0 -1  0  0  0  0  0  0  0  ]: Recebido mensagem de 7
+[184.0, Proc. 9, Rodada 2, Sorteio: -1  0 -1  0  0  0  0  0  0  0  ]: Recebido mensagem de 8
+[185.0, Proc. 0, Rodada 2, Sorteio:  0  0 -1  0  0  0  0  0  0  0  ]: Recebido mensagem de 9
+[186.0, Proc. 1, Rodada 2, Sorteio:  0  0 -1  0  0  0  0  0  0  0  ]: Recebido mensagem de 0
+[187.0, Proc. 2, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 1
+[187.0, Proc. 2, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[188.0, Proc. 3, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 2
+[188.0, Proc. 3, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[189.0, Proc. 4, Rodada 2, Sorteio: -1  0 -1  0  0  0  0  0  0  0  ]: Recebido mensagem de 3
+[189.0, Proc. 4, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[190.0, Proc. 6, Rodada 2, Sorteio: -1  0 -1  0  0  0  0  0  0  0  ]: Recebido mensagem de 5
+[191.0, Proc. 7, Rodada 2, Sorteio: -1  0 -1  0  0  0  0  0  0  0  ]: Recebido mensagem de 6
+[192.0, Proc. 8, Rodada 2, Sorteio: -1  0 -1  0  0  0  0  0  0  0  ]: Recebido mensagem de 7
+[193.0, Proc. 9, Rodada 2, Sorteio: -1  0 -1  0  0  0  0  0  0  0  ]: Recebido mensagem de 8
+[194.0, Proc. 0, Rodada 2, Sorteio:  0  0 -1  0  0  0  0  0  0  0  ]: Recebido mensagem de 9
+[195.0, Proc. 1, Rodada 2, Sorteio:  0  0 -1  0  0  0  0  0  0  0  ]: Recebido mensagem de 0
+[196.0, Proc. 2, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 1
+[196.0, Proc. 2, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[197.0, Proc. 3, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 2
+[197.0, Proc. 3, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[198.0, Proc. 4, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 3
+[198.0, Proc. 4, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[199.0, Proc. 5, Rodada 2, Sorteio: -1  0 -1  0  0  0  0  0  0  0  ]: Recebido mensagem de 4
+[199.0, Proc. 5, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[200.0, Proc. 7, Rodada 2, Sorteio: -1  0 -1  0  0  0  0  0  0  0  ]: Recebido mensagem de 6
+[201.0, Proc. 8, Rodada 2, Sorteio: -1  0 -1  0  0  0  0  0  0  0  ]: Recebido mensagem de 7
+[202.0, Proc. 9, Rodada 2, Sorteio: -1  0 -1  0  0  0  0  0  0  0  ]: Recebido mensagem de 8
+[203.0, Proc. 0, Rodada 2, Sorteio:  0  0 -1  0  0  0  0  0  0  0  ]: Recebido mensagem de 9
+[204.0, Proc. 1, Rodada 2, Sorteio:  0  0 -1  0  0  0  0  0  0  0  ]: Recebido mensagem de 0
+[205.0, Proc. 2, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 1
+[205.0, Proc. 2, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[206.0, Proc. 3, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 2
+[206.0, Proc. 3, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[207.0, Proc. 4, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 3
+[207.0, Proc. 4, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[208.0, Proc. 5, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 4
+[208.0, Proc. 5, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[209.0, Proc. 6, Rodada 2, Sorteio: -1  0 -1  0  0  0  0  0  0  0  ]: Recebido mensagem de 5
+[209.0, Proc. 6, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[210.0, Proc. 8, Rodada 2, Sorteio: -1  0 -1  0  0  0  0  0  0  0  ]: Recebido mensagem de 7
+[211.0, Proc. 9, Rodada 2, Sorteio: -1  0 -1  0  0  0  0  0  0  0  ]: Recebido mensagem de 8
+[212.0, Proc. 0, Rodada 2, Sorteio:  0  0 -1  0  0  0  0  0  0  0  ]: Recebido mensagem de 9
+[213.0, Proc. 1, Rodada 2, Sorteio:  0  0 -1  0  0  0  0  0  0  0  ]: Recebido mensagem de 0
+[214.0, Proc. 2, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 1
+[214.0, Proc. 2, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[215.0, Proc. 3, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 2
+[215.0, Proc. 3, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[216.0, Proc. 4, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 3
+[216.0, Proc. 4, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[217.0, Proc. 5, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 4
+[217.0, Proc. 5, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[218.0, Proc. 6, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 5
+[218.0, Proc. 6, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[219.0, Proc. 7, Rodada 2, Sorteio: -1  0 -1  0  0  0  0  0  0  0  ]: Recebido mensagem de 6
+[219.0, Proc. 7, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[220.0, Proc. 9, Rodada 2, Sorteio: -1  0 -1  0  0  0  0  0  0  0  ]: Recebido mensagem de 8
+[221.0, Proc. 0, Rodada 2, Sorteio:  0  0 -1  0  0  0  0  0  0  0  ]: Recebido mensagem de 9
+[222.0, Proc. 1, Rodada 2, Sorteio:  0  0 -1  0  0  0  0  0  0  0  ]: Recebido mensagem de 0
+[223.0, Proc. 2, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 1
+[223.0, Proc. 2, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[224.0, Proc. 3, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 2
+[224.0, Proc. 3, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[225.0, Proc. 4, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 3
+[225.0, Proc. 4, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[226.0, Proc. 5, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 4
+[226.0, Proc. 5, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[227.0, Proc. 6, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 5
+[227.0, Proc. 6, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[228.0, Proc. 7, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 6
+[228.0, Proc. 7, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[229.0, Proc. 8, Rodada 2, Sorteio: -1  0 -1  0  0  0  0  0  0  0  ]: Recebido mensagem de 7
+[229.0, Proc. 8, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[230.0, Proc. 0, Rodada 2, Sorteio:  0  0 -1  0  0  0  0  0  0  0  ]: Recebido mensagem de 9
+[231.0, Proc. 1, Rodada 2, Sorteio:  0  0 -1  0  0  0  0  0  0  0  ]: Recebido mensagem de 0
+[232.0, Proc. 2, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 1
+[232.0, Proc. 2, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[233.0, Proc. 3, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 2
+[233.0, Proc. 3, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[234.0, Proc. 4, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 3
+[234.0, Proc. 4, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[235.0, Proc. 5, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 4
+[235.0, Proc. 5, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[236.0, Proc. 6, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 5
+[236.0, Proc. 6, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[237.0, Proc. 7, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 6
+[237.0, Proc. 7, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[238.0, Proc. 8, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 7
+[238.0, Proc. 8, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[239.0, Proc. 9, Rodada 2, Sorteio: -1  0 -1  0  0  0  0  0  0  0  ]: Recebido mensagem de 8
+[239.0, Proc. 9, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[240.0, Proc. 1, Rodada 2, Sorteio:  0  0 -1  0  0  0  0  0  0  0  ]: Recebido mensagem de 0
+[241.0, Proc. 2, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 1
+[241.0, Proc. 2, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[242.0, Proc. 3, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 2
+[242.0, Proc. 3, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[243.0, Proc. 4, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 3
+[243.0, Proc. 4, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[244.0, Proc. 5, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 4
+[244.0, Proc. 5, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[245.0, Proc. 6, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 5
+[245.0, Proc. 6, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[246.0, Proc. 7, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 6
+[246.0, Proc. 7, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[247.0, Proc. 8, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 7
+[247.0, Proc. 8, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[248.0, Proc. 9, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 8
+[248.0, Proc. 9, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[249.0, Proc. 0, Rodada 2, Sorteio:  0  0 -1  0  0  0  0  0  0  0  ]: Recebido mensagem de 9
+[249.0, Proc. 0, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[250.0, Proc. 2, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 1
+[250.0, Proc. 2, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[251.0, Proc. 3, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 2
+[251.0, Proc. 3, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[252.0, Proc. 4, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 3
+[252.0, Proc. 4, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[253.0, Proc. 5, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 4
+[253.0, Proc. 5, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[254.0, Proc. 6, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 5
+[254.0, Proc. 6, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[255.0, Proc. 7, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 6
+[255.0, Proc. 7, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[256.0, Proc. 8, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 7
+[256.0, Proc. 8, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[257.0, Proc. 9, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 8
+[257.0, Proc. 9, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[258.0, Proc. 0, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 9
+[258.0, Proc. 0, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[259.0, Proc. 1, Rodada 2, Sorteio:  0  0 -1  0  0  0  0  0  0  0  ]: Recebido mensagem de 0
+[259.0, Proc. 1, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[260.0, Proc. 3, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 2
+[260.0, Proc. 3, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[261.0, Proc. 4, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 3
+[261.0, Proc. 4, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[262.0, Proc. 5, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 4
+[262.0, Proc. 5, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[263.0, Proc. 6, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 5
+[263.0, Proc. 6, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[264.0, Proc. 7, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 6
+[264.0, Proc. 7, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[265.0, Proc. 8, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 7
+[265.0, Proc. 8, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[266.0, Proc. 9, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 8
+[266.0, Proc. 9, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[267.0, Proc. 0, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 9
+[267.0, Proc. 0, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[268.0, Proc. 1, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 0
+[268.0, Proc. 1, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[269.0, Proc. 2, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 1
+[269.0, Proc. 2, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[270.0, Proc. 4, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 3
+[270.0, Proc. 4, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[271.0, Proc. 5, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 4
+[271.0, Proc. 5, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[272.0, Proc. 6, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 5
+[272.0, Proc. 6, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[273.0, Proc. 7, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 6
+[273.0, Proc. 7, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[274.0, Proc. 8, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 7
+[274.0, Proc. 8, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[275.0, Proc. 9, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 8
+[275.0, Proc. 9, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[276.0, Proc. 0, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 9
+[276.0, Proc. 0, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[277.0, Proc. 1, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 0
+[277.0, Proc. 1, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[278.0, Proc. 2, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 1
+[278.0, Proc. 2, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[279.0, Proc. 3, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 2
+[279.0, Proc. 3, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[280.0, Proc. 5, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 4
+[280.0, Proc. 5, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[281.0, Proc. 6, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 5
+[281.0, Proc. 6, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[282.0, Proc. 7, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 6
+[282.0, Proc. 7, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[283.0, Proc. 8, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 7
+[283.0, Proc. 8, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[284.0, Proc. 9, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 8
+[284.0, Proc. 9, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[285.0, Proc. 0, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 9
+[285.0, Proc. 0, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[286.0, Proc. 1, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 0
+[286.0, Proc. 1, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[287.0, Proc. 2, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 1
+[287.0, Proc. 2, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[288.0, Proc. 3, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 2
+[288.0, Proc. 3, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[289.0, Proc. 4, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 3
+[289.0, Proc. 4, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[290.0, Proc. 6, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 5
+[290.0, Proc. 6, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[291.0, Proc. 7, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 6
+[291.0, Proc. 7, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[292.0, Proc. 8, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 7
+[292.0, Proc. 8, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[293.0, Proc. 9, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 8
+[293.0, Proc. 9, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[294.0, Proc. 0, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 9
+[294.0, Proc. 0, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[295.0, Proc. 1, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 0
+[295.0, Proc. 1, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[296.0, Proc. 2, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 1
+[296.0, Proc. 2, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[297.0, Proc. 3, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 2
+[297.0, Proc. 3, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[298.0, Proc. 4, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 3
+[298.0, Proc. 4, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[299.0, Proc. 5, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 4
+[299.0, Proc. 5, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[300.0, Proc. 7, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 6
+[300.0, Proc. 7, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[301.0, Proc. 8, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 7
+[301.0, Proc. 8, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[302.0, Proc. 9, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 8
+[302.0, Proc. 9, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[303.0, Proc. 0, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 9
+[303.0, Proc. 0, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[304.0, Proc. 1, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 0
+[304.0, Proc. 1, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[305.0, Proc. 2, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 1
+[305.0, Proc. 2, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[306.0, Proc. 3, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 2
+[306.0, Proc. 3, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[307.0, Proc. 4, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 3
+[307.0, Proc. 4, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[308.0, Proc. 5, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 4
+[308.0, Proc. 5, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[309.0, Proc. 6, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 5
+[309.0, Proc. 6, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[310.0, Proc. 8, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 7
+[310.0, Proc. 8, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[311.0, Proc. 9, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 8
+[311.0, Proc. 9, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[312.0, Proc. 0, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 9
+[312.0, Proc. 0, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[313.0, Proc. 1, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 0
+[313.0, Proc. 1, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[314.0, Proc. 2, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 1
+[314.0, Proc. 2, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[315.0, Proc. 3, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 2
+[315.0, Proc. 3, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[316.0, Proc. 4, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 3
+[316.0, Proc. 4, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[317.0, Proc. 5, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 4
+[317.0, Proc. 5, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[318.0, Proc. 6, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 5
+[318.0, Proc. 6, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[319.0, Proc. 7, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 6
+[319.0, Proc. 7, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[320.0, Proc. 9, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 8
+[320.0, Proc. 9, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[321.0, Proc. 0, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 9
+[321.0, Proc. 0, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[322.0, Proc. 1, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 0
+[322.0, Proc. 1, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[323.0, Proc. 2, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 1
+[323.0, Proc. 2, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[324.0, Proc. 3, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 2
+[324.0, Proc. 3, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[325.0, Proc. 4, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 3
+[325.0, Proc. 4, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[326.0, Proc. 5, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 4
+[326.0, Proc. 5, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[327.0, Proc. 6, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 5
+[327.0, Proc. 6, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[328.0, Proc. 7, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 6
+[328.0, Proc. 7, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[329.0, Proc. 8, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 7
+[329.0, Proc. 8, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[330.0, Proc. 0, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 9
+[330.0, Proc. 0, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[331.0, Proc. 1, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 0
+[331.0, Proc. 1, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[332.0, Proc. 2, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 1
+[332.0, Proc. 2, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[333.0, Proc. 3, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 2
+[333.0, Proc. 3, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[334.0, Proc. 4, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 3
+[334.0, Proc. 4, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[335.0, Proc. 5, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 4
+[335.0, Proc. 5, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[336.0, Proc. 6, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 5
+[336.0, Proc. 6, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[337.0, Proc. 7, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 6
+[337.0, Proc. 7, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[338.0, Proc. 8, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 7
+[338.0, Proc. 8, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[339.0, Proc. 9, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 8
+[339.0, Proc. 9, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[340.0, Proc. 1, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 0
+[340.0, Proc. 1, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[341.0, Proc. 2, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 1
+[341.0, Proc. 2, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[342.0, Proc. 3, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 2
+[342.0, Proc. 3, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[343.0, Proc. 4, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 3
+[343.0, Proc. 4, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[344.0, Proc. 5, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 4
+[344.0, Proc. 5, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[345.0, Proc. 6, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 5
+[345.0, Proc. 6, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[346.0, Proc. 7, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 6
+[346.0, Proc. 7, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[347.0, Proc. 8, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 7
+[347.0, Proc. 8, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[348.0, Proc. 9, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 8
+[348.0, Proc. 9, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[349.0, Proc. 0, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 9
+[349.0, Proc. 0, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[350.0, Proc. 2, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 1
+[350.0, Proc. 2, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[351.0, Proc. 3, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 2
+[351.0, Proc. 3, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[352.0, Proc. 4, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 3
+[352.0, Proc. 4, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[353.0, Proc. 5, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 4
+[353.0, Proc. 5, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[354.0, Proc. 6, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 5
+[354.0, Proc. 6, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[355.0, Proc. 7, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 6
+[355.0, Proc. 7, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[356.0, Proc. 8, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 7
+[356.0, Proc. 8, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[357.0, Proc. 9, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 8
+[357.0, Proc. 9, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[358.0, Proc. 0, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 9
+[358.0, Proc. 0, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[359.0, Proc. 1, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 0
+[359.0, Proc. 1, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[360.0, Proc. 3, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 2
+[360.0, Proc. 3, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[361.0, Proc. 4, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 3
+[361.0, Proc. 4, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[362.0, Proc. 5, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 4
+[362.0, Proc. 5, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[363.0, Proc. 6, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 5
+[363.0, Proc. 6, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[364.0, Proc. 7, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 6
+[364.0, Proc. 7, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[365.0, Proc. 8, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 7
+[365.0, Proc. 8, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[366.0, Proc. 9, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 8
+[366.0, Proc. 9, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[367.0, Proc. 0, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 9
+[367.0, Proc. 0, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[368.0, Proc. 1, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 0
+[368.0, Proc. 1, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[369.0, Proc. 2, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 1
+[369.0, Proc. 2, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[370.0, Proc. 4, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 3
+[370.0, Proc. 4, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[371.0, Proc. 5, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 4
+[371.0, Proc. 5, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[372.0, Proc. 6, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 5
+[372.0, Proc. 6, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[373.0, Proc. 7, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 6
+[373.0, Proc. 7, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[374.0, Proc. 8, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 7
+[374.0, Proc. 8, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[375.0, Proc. 9, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 8
+[375.0, Proc. 9, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[376.0, Proc. 0, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 9
+[376.0, Proc. 0, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[377.0, Proc. 1, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 0
+[377.0, Proc. 1, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[378.0, Proc. 2, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 1
+[378.0, Proc. 2, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[379.0, Proc. 3, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 2
+[379.0, Proc. 3, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[380.0, Proc. 5, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 4
+[380.0, Proc. 5, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[381.0, Proc. 6, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 5
+[381.0, Proc. 6, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[382.0, Proc. 7, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 6
+[382.0, Proc. 7, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[383.0, Proc. 8, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 7
+[383.0, Proc. 8, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[384.0, Proc. 9, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 8
+[384.0, Proc. 9, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[385.0, Proc. 0, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 9
+[385.0, Proc. 0, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[386.0, Proc. 1, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 0
+[386.0, Proc. 1, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[387.0, Proc. 2, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 1
+[387.0, Proc. 2, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[388.0, Proc. 3, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 2
+[388.0, Proc. 3, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[389.0, Proc. 4, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 3
+[389.0, Proc. 4, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[390.0, Proc. 6, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 5
+[390.0, Proc. 6, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[391.0, Proc. 7, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 6
+[391.0, Proc. 7, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[392.0, Proc. 8, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 7
+[392.0, Proc. 8, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[393.0, Proc. 9, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 8
+[393.0, Proc. 9, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[394.0, Proc. 0, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 9
+[394.0, Proc. 0, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[395.0, Proc. 1, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 0
+[395.0, Proc. 1, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[396.0, Proc. 2, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 1
+[396.0, Proc. 2, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[397.0, Proc. 3, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 2
+[397.0, Proc. 3, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[398.0, Proc. 4, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 3
+[398.0, Proc. 4, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[399.0, Proc. 5, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 4
+[399.0, Proc. 5, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
+[400.0, Proc. 7, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Recebido mensagem de 6
+[400.0, Proc. 7, Rodada 2, Sorteio:  0  0  1  0  0  0  0  0  0  0  ]: Eleito um lider
