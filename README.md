@@ -2,6 +2,13 @@
 
 Nome: Felipe Gustavo Bombardelli
 
+Compilação do projeto. Isso gerará três executáveis, algorimo1, algoritmo2 e trabalho_pratico
+
+```bash
+make
+```
+
+
 # 0. Trabalho Prático
 
 ## 0.1. Tarefa 1
