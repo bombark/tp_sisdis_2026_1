@@ -975,4 +975,4 @@ int main(int argc, char** argv) {
 
 Infelizmente, não deu tempo para fazer algo funcional. Tentei inicialmente carregar o código do processo via biblioteca dinamica e diferentes threads para simular diferentes processos, mas compartilhando a mesma memória e utilizando diretamente as funções SMPL. Porém não foi uma boa abordagem.
 
-Atualmente, cada processo é executado por fork, e existe um processo lançador que guarda os eventos e envia os eventos para os processos. Os processos no modo simulador fica preso até receber um evento do lançador.
+Atualmente, cada processo é executado por fork, e existe um processo lançador que guarda os eventos e envia os eventos para os processos. Os processos no modo simulador fica preso até receber um evento do lançador. Ainda falta muita coisa para fazer :/
