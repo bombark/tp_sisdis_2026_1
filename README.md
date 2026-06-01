@@ -909,3 +909,71 @@ int main() {
 Outros Logs:
  - [Log 10 processos](https://github.com/bombark/tp_sisdis_2026_1/blob/main/log_algoritmo2_10.txt)
  - [Log 20 processos](https://github.com/bombark/tp_sisdis_2026_1/blob/main/log_algoritmo2_20.txt)
+
+
+# Extra - Ideia para SMPL 2
+
+Ideia principal: O mesmo código ser possível de simular usando SMPL e também de executar na prática
+usando algum protocolo de comunicação.
+
+A arquitetura do SMPL 2 seria constituido em dois arquivos. O primeiro arquivo lançaria os processos e 
+também os eventos. Segue um exemplo para o lançador e para o processo. Segundo seria o arquivo do código do
+processo em si.
+
+```c
+// main_lançador.c
+int main() {
+    smpl2_launcher_init();
+
+    // inicializa 10 processos
+    smpl2_launcher_node("./processo", 10);  
+
+    // agenda os eventos
+    smpl2_launcher_schedule(TEST, 70, 0);
+    smpl2_launcher_schedule(FAULT, 80, 1);
+    smpl2_launcher_schedule(TEST, 90, 2);
+
+    // espera os processos executarem
+    smpl2_launcher_wait();
+
+    // fim
+    smpl2_launcher_close();
+    return 0;
+}
+```
+
+A seguir segue um exemplo de um código de um processo.
+
+```c
+int main(int argc, char** argv) {
+    // Inicio
+    smpl2_init(argc, argv);
+
+    // Algumas funções para pegar o id do processo corrent
+    const int id_processo = smpl2_id();
+    const int N = smpl2_nprocess();
+
+    // Loop principal
+    while (1) {
+        const int event = smpl2_cause();
+
+        // Recebido o evento periodico para testar o nodo 
+        if ( event == TEST ) {
+            int proximo_processo = (id_processo + 1) % N;
+            smpl2_sendto(proximo_processo, "%s", "test");
+
+        // Recebido uma mensagem de teste
+        } else if ( event == RECEIVE ) {
+            smpl2_answer("%s", "OK");
+        }
+    }
+
+    // Fim
+    printf("FIM\n");
+    return 0;
+}
+```
+
+Infelizmente, não deu tempo para fazer algo funcional. Tentei inicialmente carregar o código do processo via biblioteca dinamica e diferentes threads para simular diferentes processos, mas compartilhando a mesma memória e utilizando diretamente as funções SMPL. Porém não foi uma boa abordagem.
+
+Atualmente, cada processo é executado por fork, e existe um processo lançador que guarda os eventos e envia os eventos para os processos. Os processos no modo simulador fica preso até receber um evento do lançador.
