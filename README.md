@@ -917,8 +917,7 @@ Ideia principal: O mesmo código ser possível de simular usando SMPL e também 
 usando algum protocolo de comunicação.
 
 A arquitetura do SMPL 2 seria constituido em dois arquivos. O primeiro arquivo lançaria os processos e 
-também os eventos. Segue um exemplo para o lançador e para o processo. Segundo seria o arquivo do código do
-processo em si.
+agendaria os eventos. Segundo arquivo seria o código do processo em si. Segue a seguir um exemplo de lançador.
 
 ```c
 // main_lançador.c
